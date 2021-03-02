@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>일반 구조 선택자,, 형태 구조 선택자 차이</title>
+    <style>
+        div p:first-child {
+            background:red; /* 적용 안됨 */
+        }
+        /* 일반 구조 선택자 : 종류 상관없이 무조건 첫번째 태그부터 검색. */
+
+        div p:first-of-type {
+            background:blue; /* p 중에 첫번째 요소이기 때문에 적용 됨. */
+        }
+        /* 형태 구조 선택자 : 지정된 태그 중에서 첫번째 태그부터 검색 */
+    </style>
+</head>
+<body>
+    <div>
+        <h1>test1</h1>
+        <p>Lorem1</p>
+        <h2>test2</h2>
+        <p>Lorem2</p>
+        <h3>test3</h3>
+    </div>
+</body>
+</html>

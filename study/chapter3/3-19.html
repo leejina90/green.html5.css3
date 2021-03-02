@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3-19_테이블 코드 작성시 자손선택 주의점</title>
+    <style>
+        table > tr > th {
+            color: red;
+        }
+        /* 위처럼 작성할 경우 코드상으로는 실행이 될 것 같지만, 
+        실제로 웹에서 실행해 보면 실행이 되지 않는다. 
+        
+        웹에서는 테이블태그내에 tbody가 자동추가되기 때문에 자손선택이 성립되지 않아
+        실행이 되지 않는다.
+
+        table > tbody > tr > th {
+            color: red;
+        }
+
+        실행을 원할 경우 위처럼 작성할 것 */
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+    </table>
+</body>
+</html>

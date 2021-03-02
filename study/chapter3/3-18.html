@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3-18_자손선택자와 후손선택자</title>
+    <style>
+        /* 후손선택자 */
+        #header h1 {color: palegreen;}
+        /* #header에는 후손인 h1이 2개가 있기 때문에 이 경우 h1 2개가 모두 선택되어 적용됨 */
+
+        /* 자손선택자 */
+        #header > h1 {color: purple;}
+        /* #header에 있는 자손이 선택되어 적용됨. 다른 h1은 같은 후손 선택자이지만, 자손선택자가 아니기 때문에 적용 X */
+
+        /* 선택자를 쓸때는 선택자를 보다 명확히 하여 로딩속도를 빠르게 해주면 좋음
+            EX) #nav {color:red;} X
+                #header > nav {color:red;} O */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+</body>
+</html>

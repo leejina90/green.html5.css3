@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3-13</title>
+    <style>
+        img[src$=".png"] {border: 5px solid violet;}
+        /* 통상의 경우 쌍따옴표는 쓰지 않아도 인식이 되지만, 
+        예를 들어 .같은 문자가 중간에 들어갈 경우 쌍따옴표를 써주어야 인식이 된다. 
+        그러니, 아예 항상 쌍따옴표를 쓰는 습관을 들일 것. */
+
+        img[src$="jpg"] {border: 3px solid green;}
+
+        img[src$="gif"] {border: 3px dotted blue;}
+    </style>
+</head>
+<body>
+    <img src="jajq.png" width="200" height="250" />
+    <img src="node.jpg" width="200" height="250" />
+    <img src="ux.gif" width="200" height="250" />
+</body>
+</html>

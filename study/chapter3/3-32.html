@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3-32</title>
+    <style>
+        p {counter-increment: rint;}
+        p::before {content: counter(rint) ".";}
+        p::after {content: " - " attr(data-page) " page";}
+        p::first-letter {font-size: 3em;}
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <p data-page="52"> Sequi asperiores aspernatur est reiciendis adipisci quidem, eaque sed aliquid voluptatum, </p>
+    <p data-page="273">aliquam laudantium repudiandae error beatae placeat necessitatibus, ipsam aut sint quibusdam.</p>
+</body>
+</html>
