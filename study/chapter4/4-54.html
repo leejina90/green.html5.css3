@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>4-54</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .red {
+            background-color: red;
+            left: 10px; top: 10px;
+            z-index: 100;
+        }
+        .green {
+            background-color: green;
+            left: 50px; top: 50px;
+            z-index: 10;
+            }
+        .blue {
+            background-color: blue;
+            left: 90px; top: 90px;
+            z-index: 1;
+            }
+            /* z-index : 숫자가 클수록 앞으로 옴. -마이너스 음수도 가능. */
+    </style>
+</head>
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+</body>
+</html>

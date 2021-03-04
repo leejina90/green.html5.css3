@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>4-56</title>
+    <style>
+
+        body > div {
+            width: 400px; height: 100px;
+            border: 3px solid black;
+            position: relative;
+
+            overflow: hidden;
+            /* overflow: scroll; */
+        }
+        /* 자손태그에  position: absolute;사용시 무조건 부모태그에 
+        height속성과 position: relative;를 적용해주어야 한다.*/
+
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor sit amet</h1>
+</body>
+</html>

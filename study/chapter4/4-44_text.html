@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>4-44</title>
+    <style>
+        /* font-size */
+        .a {font-size: 32px;}
+        .b {font-size: 2em;}
+        .c {font-size: large;}
+        .d {font-size: small;}
+
+        /* font-family */
+        .font_arial {font-family: Arial;}
+        .font_roman {font-family: 'Times New Roman';}
+
+        .font_ar {'없는 폰트', Arial;}
+        /* 없을 떄를 대비하여 여러 폰트 사용가능 */
+
+        /* font_style font_weight */
+        .font_big {font-size: 2em;}
+        .font_italic {font-style: italic;}
+        .font-bold {font-weight: bold;}
+        
+        /* line-height */
+        .font_center {text-align: center;}
+        /* 글자 가로 정렬 */
+        /* span태그 등 inline형식의 태그에는 가로 너비값이 없기 때문에 text-align속성 적용 안됨 */
+
+        .button {
+            width: 150px;
+            height: 70px;
+            background-color: #FF6A00;
+            border: 10px solid #FFF;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #A9A9A9;
+        }
+
+        .button > a {
+            display: block;
+            line-height: 70px;
+            /* block형식을 가진 태그를 수직정렬하는 방법은 없으므로
+            대체 방안으로 line-height속성 사용 */
+        }
+
+        /* text_align */
+        .font_right {text-align: right;}
+
+        /* text_decoration */
+        a {text-decoration: none;}
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum</h1>
+    <p class="a">Lorem ipsum</p>
+    <p class="b">Lorem ipsum</p>
+    <p class="c">Lorem ipsum</p>
+    <p class="d">Lorem ipsum</p>
+
+    <h1 class="font_arial">Lorem ipsum</h1>
+    <h1 class="font_roman">Lorem ipsum</h1>
+
+    <h1 class="font_ar">Lorem ipsum</h1>
+
+    <p class="font_big font_italic font_bold">Lorem ipsum</p>
+
+    <div class="button">
+        <a href="#" class="font_big font_italic font_bold font_center">Click</a>
+    </div>
+
+    <p class="font_right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum provident assumenda veritatis reprehenderit facere quis nesciunt quae amet quas, quo libero rem accusantium reiciendis earum dicta, harum neque illo eos.</p>
+</body>
+</html>
