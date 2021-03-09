@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/53e77e6a7c.js" crossorigin="anonymous"></script>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {font-family: 'Helvetica', sans-serif;}
+        li {list-style: none;}
+        a {text-decoration: none;}
+
+        #main_content {
+            overflow: hidden;
+        }
+        #main_content > aside {
+            width: 150px;
+            float: left;
+            margin-left: 10px;
+            margin-right: 5%;
+        }
+        #main_content > section {
+            width: 70%;
+            float: left;
+            margin-right: 5%;
+        }
+
+        .list-group-item:nth-child(1) {
+            background: grey;
+        }
+        .list-group-item:nth-child(1):hover {
+            background: black;
+        }
+
+        .media {
+            margin-top: 40px;
+        }
+
+        /* 푸터 */
+        #main_footer {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="fab fa-android"></i> Brand</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+    </header>
+    <div id="main_content">
+        <aside>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    HOME
+                </a>
+                <a href="#" class="list-group-item">MENU1</a>
+                <a href="#" class="list-group-item">MENU2</a>
+                <a href="#" class="list-group-item">MENU3</a>
+                <a href="#" class="list-group-item">MENU4</a>
+                <a href="#" class="list-group-item">MENU5</a>
+            </div>
+        </aside>
+        <section>
+            <div class="page-header">
+                <h1>Example page header <small>Subtext for header</small></h1>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+              </ol>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt nihil debitis, non totam distinctio maiores ipsa animi ea impedit vitae nemo ducimus quasi explicabo ab doloribus, ratione harum voluptatibus!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt nihil debitis, non totam distinctio maiores ipsa animi ea impedit vitae nemo ducimus quasi explicabo ab doloribus, ratione harum voluptatibus!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt nihil debitis, non totam distinctio maiores ipsa animi ea impedit vitae nemo ducimus quasi explicabo ab doloribus, ratione harum voluptatibus!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt nihil debitis, non totam distinctio maiores ipsa animi ea impedit vitae nemo ducimus quasi explicabo ab doloribus, ratione harum voluptatibus!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt nihil debitis, non totam distinctio maiores ipsa animi ea impedit vitae nemo ducimus quasi explicabo ab doloribus, ratione harum voluptatibus!Lorem</p>
+            </div>
+            <div class="media">
+                <div class="media-left media-middle">
+                  <a href="#">
+                    <img class="media-object" src="https://via.placeholder.com/150" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">Middle aligned media</h4>
+                  <p>Lorem ipsum dolor sit amet, magnam libero ab excepturi aut ullam, atque pariatur voluptatibus deserunt commodi exercitationem, eaque velit quos minima! Labore, fuga corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel delectus omnis magnam libero ab excepturi aut ullam, atque pariatur voluptatibus deserunt</p>
+                </div>
+              </div>
+              <div class="media">
+                <div class="media-left media-middle">
+                  <a href="#">
+                    <img class="media-object" src="https://via.placeholder.com/150" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">Middle aligned media</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel delectus omnis magnam, atque pariatur voluptatibus deserunt commodi exercitationem, eaque velit quos minima! Labore, fuga corporis!</p>
+                </div>
+              </div>
+
+
+        </section>
+    </div>
+    <footer id="main_footer">
+        <h3>HTML5 + CSS3</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+</html>
