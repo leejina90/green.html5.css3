@@ -150,7 +150,22 @@ body {position: relative;}
 }
 #sub_section > div#sub_img {
     float: left;
+    width: 795px;
 }
 #sub_section > div#sub_ad {
+    width: 170px;
     float: right;
+}
+
+/* footer */
+footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #aaa;
+    background: #ddd;
+}
+footer > h1 {
+    font-weight: 700;
+    font-size: 16px;
 }
