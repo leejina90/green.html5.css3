@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {margin: 0; padding: 0;}
+a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+}
+ul {list-style: none;}
+img {border: 0;}
+
+/* header */
+header#main_header {
+    
+}
+/* header_top */
+#header_top {
+    width: 100%;
+    height: 120px;
+}
+.inner {
+    position: relative;
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+}
+#header_top > .inner > #btn_category {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    margin: -18px 0 0 -18px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-position: -306px -203px;
+    background-size: 363px 300px;
+    content: "";
+}
+#header_top > .inner > #logo {
+    position: absolute;
+    left: 103px;
+    top: 40px;
+    width: 94px;
+    height: 40px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-position: -162px 0px;
+    background-size: 363px 300px;
+}
+#header_top > .inner > #search {
+    position: absolute;
+    left: 220px;
+    top: 35px;
+    width: 500px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    background: #fafafa;
+}
+#header_top > .inner > #search > input {
+    border: none;
+    margin-left: 20px;
+    margin-top: 5px;
+    background: rgb(0,0,0,0);
+    width: 420px;
+    height: 35px;
+}
+#header_top > .inner > #search > button {
+    position: absolute;
+    right: -1px;
+    top: -3px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-position: -162px -45px;
+    background-size: 363px 300px;
+    background-color: rgb(0,0,0,0);
+    border: none;
+}
+#header_top > .inner > #ranking {
+    position: absolute;
+    left: 750px;
+    top: 45px;
+    overflow: hidden;
+    width: 200px;
+}
+#ranking > #txt_ranking {
+    font-weight: 700;
+    float: left;
+}
+#ranking > #txt_ranking > span {
+    color: red;
+    font-style: italic;
+    margin-right: 5px;
+}
+#ranking > #btn_ranking {
+    float: right;
+}
+#ranking > #btn_ranking > button {
+    width: 10px;
+    height: 10px;
+    border-bottom: none;
+    border-left: none;
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    transform: rotate(135deg);
+    background: none;
+    content: '';
+    margin: 0 5px;
+}
+#main_header > #header_top > .inner > #mypage_menu {
+    position: absolute;
+    top: 35px;
+    left: 990px;
+}
+#mypage_menu > ul {
+    overflow: hidden;
+}
+#mypage_menu > ul > li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.user_menu > a > span {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-size: 363px 300px;
+}
+.menu_01 > a > span {
+    background-position: -159px -145px; 
+}
+.menu_02 > a > span {
+    background-position: -53px -145px; 
+}
+.menu_03 > a > span {
+    background-position: -94px -70px;
+}
+.menu_04 > a > span {
+    background-position: -53px -198px;
+}
+
+/* header_bottom */
+#header_bottom {
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.header_bottom_inner {
+    overflow: hidden;
+}
+#header_bottom > .inner > ul#best_deal {
+    overflow: hidden;
+    float: left;
+}
+#header_bottom > .inner > ul#best_deal > li {
+    float: left;
+    margin-right: 15px;
+}
+#header_bottom > .inner > ul#best_deal > li:nth-child(6) {
+    display: block;
+    width: 63px;
+    height: 65px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-position: -94px 0px;
+    background-size: 363px 300px;
+}
+
+
+#header_bottom > .inner > ul#login_menu {
+    overflow: hidden;
+    float: right;
+}
+#header_bottom > .inner > ul#login_menu > li {
+    float: left;
+    margin-right: 15px;
+}
+ul#login_menu > li:nth-child(4) {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-position: -277px -251px;
+    background-size: 363px 300px;
+    margin: 25px 0;
+}
+ul#login_menu > li:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/sp_gnb_2x_202138_151255.png);
+    background-position: -252px -251px;
+    background-size: 363px 300px;
+    margin: 25px 0;
+}
+
+/* main */
+#main_slide {
+    background: #6dd743;
+}
+
+/* main_service */
+
