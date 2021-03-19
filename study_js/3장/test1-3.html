@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <script>
+        var schoolYear = prompt("학년을 입력해주세요.","0");
+        var score = prompt("점수를 입력해주세요.","0");
+        
+        if(score>100||score<0){
+            alert("에러입니다.");
+        }else if(schoolYear >= 4){
+            if(score >= 70){
+                document.write("합격");
+            }
+        }else if(schoolYear<4){
+            if(score >= 60){
+                document.write("합격");
+            }
+        }
+    </script>
+</body>
+</html>

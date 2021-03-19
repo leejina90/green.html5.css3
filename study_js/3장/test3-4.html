@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <script>
+        // 문제4. 1부터 20미만의 정수 중에서 2 또는 3의 배수인 수의 총합을 구하시오.(결과는 117)
+
+        var num = 0;
+
+        for (var i = 1; i < 20; i++) {
+            if ((i % 2 == 0) || (i % 3 == 0)) {
+                num +=i;
+            }
+        }
+        // 괄호 구분을 꼭 해줄 것
+
+        document.write(num);
+    </script>
+</body>
+</html>
