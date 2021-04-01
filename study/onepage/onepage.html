@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="onepage.css" rel="stylesheet" type="text/css">
-    <style>
-        
-    </style>
-    <script src="jquery-3.6.0.min.js"></script>
-    <script>
-        $(function(){
-            
-        });
-    </script>
+    <link href="css/onepage-result.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="container">
         <header>
             <h1>여행 목적지</h1>
             <nav>
-                <a href="">유럽</a>
-                <a href="">미국</a>
-                <a href="">중국</a>
-                <a href="">일본</a>
+                <a href="#eu" class="nav-btn">유럽</a>
+                <a href="#us" class="nav-btn">미국</a>
+                <a href="#ch" class="nav-btn">중국</a>
+                <a href="#jp" class="nav-btn">일본</a>
             </nav>
         </header>
-        <section id="eu">
-            <h2></h2>
+        <section id="eu" class="page1">
+            <h2>유럽</h2>
         </section>
-        <section id="us">
-            <h2></h2>
+        <section id="us" class="page2">
+            <h2>미국</h2>
         </section>
-        <section id="ch">
-            <h2></h2>
+        <section id="ch" class="page3">
+            <h2>중국</h2>
         </section>
-        <section id="jp">
-            <h2></h2>
+        <section id="jp" class="page4">
+            <h2>일본</h2>
         </section>
     </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script>
+        $(function(){
+            $("nav a").click(function(e){
+                $.scrollTo(this.hash||0, 800);
+                e.preventDefault();
+            });
+        });
+        // 메뉴를 클릭해서 해당 페이지로 이동할 시 속도 조절
+    </script>
 </body>
 </html>

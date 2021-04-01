@@ -19,12 +19,11 @@
                 "mouseover focus": function(){
                     $(".btn2").parent().next()
                     .css({"color":"#0f0"});
-                },
-                "mouseout blur": function(){
-                    $(".btn2").parent().next()
-                    .css({"color":"#000"});
-                },
+                }
             });
+
+            $(".btn1").off("click");
+            $(".btn2").off("mouseover focus");
         });
     </script>
 </head>
