@@ -48,6 +48,7 @@
     <script src="js/jquery.parallax-scroll.min.js"></script>
     <script>
         $(function(){
+            // 상단 nav에 .scroll을 클릭하면 부드럽게 움직이는 애니메이션 이벤트를 추가.
             $(".scroll").click(function(e){
                 e.preventDefault();
                 $("html, body").animate({
@@ -55,8 +56,30 @@
                 }, 500);
             });
 
+            // .content의 수만큼 반복 실행되며, 화면너비높이가 바뀔때마다 설정한 마진값 변경
             $(window).resize(function(){
-                $(".container").width($(window).width())
+                $(".container").width($(window).width()).height($(window).height());
+                $(".content").each(function(){
+                    $(this).css("margin-left", ($(this).width()/2 * -1) + "px")
+                            .css("margin-top", ($(this).height()/2 * -1) + "px");
+                });
+            });
+
+            // 한번만 윈도우 리사이징
+            setTimeout(function(){
+                $(window).resize();
+            }, 1000);
+
+            // 이미지 스크롤링시 딜레이 0 ~ 1
+            $(".bg-holder").parallaxScroll({
+                friction: 0.3
+            });
+
+            // .icon img에 hover시 이미지 교체하고 떼면 원래 이미지로 다시 교체
+            $(".icon img").hover(function(){
+                $(this).attr("src", $(this).attr("src").replace(".png", "_over.png"));
+            }, function(){
+                $(this).attr("src", $(this).attr("src").replace("_over.png", ".png"));
             });
         });
     </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="#" id="trigger">MENU</a>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WEB</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">MAP</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            var trigger = $("#trigger");
+            var menu = $("nav ul");
+
+            $(trigger).on("click", function(e){
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            // width가 320px보다 크고 menu가 :hidden 상태일 때, style을 지움.
+            // 이 부분이 없으면 토글 복귀시 width값이 커졌을 때 메뉴 복구가 안됨.
+            $(window).resize(function(){
+                var w = $(window).width();
+
+                if(w > 320 && menu.is(":hidden")) {
+                    menu.removeAttr("style");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
