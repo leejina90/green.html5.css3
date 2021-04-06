@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 13px 'Arial';
+}
+a { text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+
+/* header */
+#main_header {
+    background: grey;
+    color: #fff;
+    height: 250px;
+}
+#main_header a {
+    color: #fff;
+}
+#main_header > .gnb_container {
+    background: #000;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+}
+#main_header .gnb {
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 14px;
+}
+#main_header .logo {
+    float: left;
+    width: 190px;
+}
+#main_header ul {
+    float: left;
+    overflow: hidden;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: calc(100% - 217px);
+}
+#main_header ul > li {
+    float: left;
+    margin-right: 1rem;
+}
+#main_header .setting {
+    float: right;
+    width: 17px;
+    text-align: right;
+    padding-top: 6px;
+}
+#main_header .trigger {
+    float: right;
+    width: 23px;
+    text-align: right;
+    padding-top: 10px;
+    display: none;
+}
+
+/* content */
+#main_content {
+    height: 1000px;
+}
+
+/* media */
+@media screen and (max-width:767px) {
+    #main_header .gnb {
+        width: 90vw;
+    }
+    #main_header ul {
+        display: none;
+    }
+    #main_header .setting {
+        display: none;
+    }
+    #main_header .trigger {
+        display: block;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    #main_header .gnb {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #main_header .gnb {
+        width: 960px;
+    }
+}
+
+
+
