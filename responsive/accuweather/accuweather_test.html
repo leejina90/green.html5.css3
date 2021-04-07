@@ -29,48 +29,60 @@
         </div>
         <div class="lnb_container">
             <div class="lnb lnb1">
+                    <div class="lnb_content lnb_content1">
+                        <h1><a href="#">레이더 및 지도</a></h1>
+                        <p>과거와 현재, 미래의 기상 정보를 정지된 이미지 지도와 인터랙티브 지도로 다양한 각도에서 시각화합니다</p>
+                    </div>
+                    <div class="lnb_content lnb_content2">
+                        <div>
+                            <h2><a href="#">레이더</a></h2>
+                            <p>지역의 강수량과 유형, 강도를 분석하는 현재와 미래의 레이더 지도</p>
+                        </div>
+                        <div>
+                            <h2><a href="#">위성</a></h2>
+                            <p>구름양과 강수량을 시각화하는 위성 지도</p>
+                        </div>
+                    </div>
+                    <div class="lnb_content lnb_content3">
+                        <a href="#">
+                            <img src="#">
+                            <h4>대한민국 기상 레이더</h4>
+                            <p>강수량이 높은 지역과 수치를 나타내는 대한민국 국가 지도</p>
+                        </a>
+                    </div>
+            </div>
+            <div class="lnb lnb2">
                 <ul>
                     <li>
-                        <h1><a href="#">레이더 및 지도</a></h1>
+                        <h1><a href="#">동영상</a></h1>
                         <p>과거와 현재, 미래 어쩌구</p>
                     </li>
                     <li>
-                        <h2><a href="#">레이더</a></h2>
+                        <h2><a href="#">인기정보</a></h2>
                         <p>지역의 강수량과 유형</p>
                     </li>
                     <li>
-                        <h2><a href="#">위성</a></h2>
+                        <h2><a href="#">전문가 예보</a></h2>
                         <p>구름양과 강수량</p>
                     </li>
                     <li>
                         <a href="#">
                             <img src="#">
-                            <h4>대한민국 기상 레이더</h4>
+                            <h4>스톰 체이서</h4>
                             <p>강수량이 높은 지역과</p>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="lnb lnb2">
+            <div class="lnb lnb3">
                 <ul>
                     <li>
-                        <h1><a href="#">레이더 및 지도2</a></h1>
+                        <h1><a href="#">악천 후 기상</a></h1>
                         <p>과거와 현재, 미래 어쩌구</p>
                     </li>
                     <li>
-                        <h2><a href="#">레이더2</a></h2>
+                        <h2><a href="#">허리케인</a></h2>
                         <p>지역의 강수량과 유형</p>
-                    </li>
-                    <li>
-                        <h2><a href="#">위성2</a></h2>
-                        <p>구름양과 강수량</p>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="#">
-                            <h4>대한민국 기상 레이더2</h4>
-                            <p>강수량이 높은 지역과</p>
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -84,11 +96,33 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
         $(function(){
-            $(document).on("mouseover", ".nav1", function(){
+            $(document).on("mouseover", ".nav-li", function(){
                 $(".lnb_container").css({"display":"block"});
             });
-            $(document).on("mouseout", ".nav1", function(){
+            $(document).on("mouseout", ".nav-li", function(){
                 $(".lnb_container").css({"display":"none"});
+            });
+
+
+            $(document).on("mouseover", ".nav1", function(){
+                $(".lnb1").css({"display":"block"});
+            });
+            $(document).on("mouseout", ".nav1", function(){
+                $(".lnb1").css({"display":"none"});
+            });
+
+            $(document).on("mouseover", ".nav2", function(){
+                $(".lnb2").css({"display":"block"});
+            });
+            $(document).on("mouseout", ".nav2", function(){
+                $(".lnb2").css({"display":"none"});
+            });
+
+            $(document).on("mouseover", ".nav3", function(){
+                $(".lnb3").css({"display":"block"});
+            });
+            $(document).on("mouseout", ".nav3", function(){
+                $(".lnb3").css({"display":"none"});
             });
         });
     </script>
