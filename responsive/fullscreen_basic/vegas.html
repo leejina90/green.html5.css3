@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="js/vegas/vegas.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+        #content {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            margin-right: 50px;
+            padding: 30px 50px;
+            background: rgba(35,35,35,0.1);
+        }
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 1px 1px 2px #000;
+        }
+        p {
+            padding-top: 20px;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 2em;
+            text-shadow: 1px 1px 1px #000;
+        }
+        a, a:visited {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Fullscreen Background Image</h1>
+        <p>
+            <strong>
+                <a href="http://vegas.jaysalvat.com/">Vegas.js</a>
+            </strong> 플러그인을 이용한<br>풀스크린 배경 이미지.
+        </p>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/vegas/vegas.min.js"></script>
+    <script>
+        // $(function(){
+        //     $("body").vegas({
+        //         slides:[
+        //             {src:"images/nature-1.jpg"},
+        //             {src:"images/nature-2.jpg"},
+        //             {src:"images/nature-3.jpg"}
+        //         ],
+        //         delay:3500
+        //     });
+        // });
+        // 이미지 여러장 사용
+
+        // $(function(){
+        //     $("body").vegas({
+        //         slides:[
+        //             {src:"images/swans.jpg",
+        //                 video: {
+        //                 src: ["videos/swans.mp4"],
+        //                 loop: false,
+        //                 mute: true
+        //                 }
+        //             }
+        //         ]
+        //     });
+        // });
+        // 비디오 사용, 비디오 안나올시 이미지 대체
+
+        $(function(){
+            $("body").vegas({
+                slides:[
+                    {src:"images/nature-1.jpg"},
+                    {src:"images/nature-2.jpg"},
+                    {src:"images/nature-3.jpg"},
+                    {src:"images/swans.jpg",
+                        video: {
+                        src: ["videos/swans.mp4"],
+                        loop: false,
+                        mute: true
+                        }
+                    }
+                ]
+            });
+        });
+        // 이미지, 비디오 혼용해서 출력
+    </script>
+</body>
+</html>

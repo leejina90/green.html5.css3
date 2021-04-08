@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 {
+            color: #aff500;
+            font-family: 'Courgette', cursive;
+            font-size: 7em;
+            font-style: italic;
+            text-shadow: 2px 2px 3px #222, 2px 2px 3px #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Startup Company</h1>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script>
+        $(function(){
+            // $.backstretch("images/office-1.jpg"); // 이미지 1개만 사용시
+            $.backstretch([
+                "images/office-1.jpg",
+                "images/office-2.jpg",
+                "images/office-3.jpg"
+            ], {duration:3500, fade:750});
+            // 이미지 2개 이상 사용시
+        });
+    </script>
+</body>
+</html>
