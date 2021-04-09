@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a, a:visited {
+            text-decoration: none;
+            margin: 5px 15px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" class="tubular-play">재생</a>
+        <a href="#" class="tubular-pause">일시정지</a>
+        <a href="#" class="tubular-volume-up">소리 키우기</a>
+        <a href="#" class="tubular-volume-down">소리 줄이기</a>
+        <a href="#" class="tubular-mute">소리 끄기</a>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.tubular.1.0.js"></script>
+    <script>
+        $("document").ready(function() {
+            var options = {
+                videoId : 'v719u2zoKBk',
+                start: 9
+            };
+
+            $('#wrapper').tubular(options);
+        });
+    </script>
+</body>
+</html>
