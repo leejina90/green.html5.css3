@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b6a12f70fe74ff01c2761338f62521e"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.45238905806438, 126.69965892706529),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+        console.log(map.getCenter());
+
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: new kakao.maps.LatLng(37.45238905806438, 126.69965892706529)
+        });
+	</script>
+</body>
+</html>

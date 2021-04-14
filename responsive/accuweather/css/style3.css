@@ -149,7 +149,13 @@ ul { list-style: none; }
 
 /* content */
 #main_content {
-    height: 1000px;
+    background: #D8D8D8;
+}
+
+/* footer */
+#main_footer {
+    background: #fff;
+    height: 150px;
 }
 
 /* media */
