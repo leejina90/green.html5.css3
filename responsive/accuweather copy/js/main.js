@@ -20,4 +20,13 @@ $(function(){
     $(".temp").each(function(i){
         $(this).text(forecast.getCurrentTemp(cityList[i]) + "℃");
     });
+
+    $(".location").on({
+        "click" : function(){
+            var q = $(this).children(".q").attr("id");
+            var redirectURL = "pages/weather_location.html?q=" + q;
+            location.href = redirectURL;
+        }
+    });
 });
+
