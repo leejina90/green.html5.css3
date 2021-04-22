@@ -46,4 +46,50 @@
 		}
 	});
 
+	$(function(){
+		$(win).trigger("resize"); //사이트 로딩시 강제 실행
+
+		$(document).on("mouseover focus",  //데스크탑, 태블릿 이벤트
+		".pc #gnb>ul>li>a, .tablet #gnb>ul>li>a",
+		gnbPlay);
+
+		$(document).on("click",  //모바일 상위 메뉴 터치시 이벤트
+		".mobile #gnb>ul>li:not(.no-sub)>a",
+		gnbPlay);
+
+		function gnbPlay() {   //하위 메뉴 슬라이드 업다운 기능
+			var $ts = $(this);
+			if($("html").hasClass("mobile")) {
+				$(".mobile #gnb>ul>li>a").removeClass("on");
+				$("#gnb ul ul:visible").slideUp(300);
+
+				if($ts.next().is(":hidden")) {
+					$ts.addClass("on");
+					$ts.next().stop(true, true).slideDown(300);
+				}
+			} else {
+				$("#gnb ul ul:visible").slideUp(300);
+				$ts.next().stop(true, true).slideDown(300);
+			}
+		}
+		$(document).on("mouseleave",
+		".pc #gnb, .tablet #gnb", gnbleave);
+
+		function gnbleave() {
+			$("#gnb ul ul:visible").slideUp(300);
+			$("#gnb>ul>li>a").removeClass("on");
+		}
+
+		$(".mobile-menu-open button").on("click", function() {
+			$(".mobile-menu-wrap").animate({"left":0}, 200);
+			scrollShowHide("hidden");
+		});
+
+		$(".mobile-menu-close button").on("click", function() {
+			$(".mobile-menu-wrap").animate({"left":"-1000px"}, 200);
+			scrollShowHide("scroll");
+			gnbleave();
+		});
+	});
+
 }(window, jQuery));
