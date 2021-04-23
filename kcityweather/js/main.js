@@ -1,11 +1,10 @@
-/* 날씨 */
-
+//날씨정보 불러오기
 var forecast = new Forecast();
 
- //지역 날씨 호출
-console.log(forecast.getCurrentWeather("seoul"));
+console.log(forecast.getCurrentWeather("Seoul"));
 
-var cityList = ["seoul", "incheon", "daejeon", "daegu", "ulsan", "gwangju", "busan", "jeju"];
+// 도시리스트 클릭이벤트
+var cityList = ["Seoul", "Incheon", "Daejeon", "Daegu", "Ulsan", "Gwangju", "Busan", "Jeju"];
 
 $(function(){
     $(".temp").each(function(i){
@@ -15,10 +14,8 @@ $(function(){
     $(".city_link").on({
         "click" : function(){
             var q = $(this).children(".city").attr("id");
-            var redirectURL = "index.html?q=" + q;
+            var redirectURL = "pages/sub_pages.html?q=" + q;
             location.href = redirectURL;
         }
     });
 });
-
-
